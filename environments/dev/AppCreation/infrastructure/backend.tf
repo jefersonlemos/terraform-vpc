@@ -5,4 +5,4 @@ terraform {
     key    = "terraform-vpc"
     region = "us-east-1"
   }
-  }
+} 

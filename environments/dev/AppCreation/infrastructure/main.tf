@@ -19,4 +19,17 @@ module "vpc" {
     vpc_cidr     = var.vpc_cidr
     enable_dns_support = var.enable_dns_support
     enable_dns_hostnames = var.enable_dns_hostnames
+
+  routes = {
+    "10.1.10.0/24" = {
+      # vpc_id = module.network.vpc_id
+      cidr_block = "10.1.10.0/24"
+      subnet_type = "private"
+    }
+    "10.1.20.0/24" = {
+      # vpc_id = module.network.vpc_id
+      cidr_block = "10.1.20.0/24"
+      subnet_type = "public"
+    } 
+  }
 }
