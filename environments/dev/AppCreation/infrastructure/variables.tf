@@ -2,7 +2,7 @@
 variable "project_name" {
     description = "The name of the project"
     type        = string
-    default     = "vpc-creation" # Default project name
+    default     = "jeferson-tf-poc" # Default project name
   
 }
 
@@ -30,4 +30,31 @@ variable "enable_dns_support" {
     type        = bool
     default     = true # Default to true
   
+}
+
+variable "extra_tags" {
+  description = "Extra tag to be applied to resources"
+  type        = any
+  default = {}
+
+}
+
+#Access
+variable "define_admin_users" {
+  description = "Whether to define admin users"
+  type        = bool
+  default     = false
+  
+}
+
+variable "enable_cluster_creator_admin_permissions" {
+  description = "Enable admin permissions for the cluster creator"
+  type        = bool
+  default = false
+}
+
+variable "access_entries" {
+  description = "Map of access entries to add to the cluster"
+  type        = any
+  default     = {}
 }
