@@ -61,7 +61,7 @@ module "eks" {
     #TODO - Add addons
 
     #Define admin users
-    define_admin_users = false
+    define_admin_users = true
     enable_cluster_creator_admin_permissions = false
     access_entries = {
     eks_admin = {
